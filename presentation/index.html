@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="fr">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./assets/css/github.min.css">
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #385</h3>
+                            <h2 class="section-title">Hola Amigo</h2>
+                            <p>Votre ami nostalgique adore la “demoscene”. Malheureusement, en téléchargeant la dernière
+                                demo en vogue, il est tombé sur un ransomware qui lui a chiffré la disquette de son jeu
+                                préféré (collector et introuvable par ailleurs).
+                                <br /><br />
+                                Vous êtes son dernier recours : il compte sur vous pour récupérer ces données ! Pour ce
+                                faire, il vous fournit la disquette <code>ransomware_floppy.adf</code> ainsi que
+                                <code>flag_floppy_enc.adf</code> (cette dernière contenant les données chiffrées). Il
+                                vous
+                                précise que son modèle est le <code>500</code> avec une <code>ROM AROS</code>, et qu’il
+                                ne faut pas tenir
+                                compte des métadonnées sur la disquette chiffrée : votre ami pense les avoir modifiées
+                                sans le vouloir en tentant d’accéder à celle-ci sur son PC.
+                            </p>
+                            <h4>Fichier à étudier</h4>
+                            <p>
+                                - ransomware_floppy.adf<br />
+                                - flag_floppy_enc.adf
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2023</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                Lien officiel :
+                                <a target="_blank"
+                                    href="https://hackropole.fr/fr/challenges/reverse/fcsc2023-reverse-hola-amigo/">FCSC
+                                    2023 -
+                                    Hola Amigo
+                                </a>
+                                <br />
+                                Auteur: rbe
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Apprentissage</h3>
+                            <h2 class="section-title">Documentations et Vidéos</h2>
+                            <p class="section-subtitle">
+                                Aucune documentation pour le moment
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Aide</h3>
+                            <h2 class="section-title">Conseils et indices</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Fil sur
+                                    le Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="Remonter en haut de la page" title="Remonter en tête de site"></a>
+    </div>
+</body>
+
+</html>
